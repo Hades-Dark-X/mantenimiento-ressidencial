@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-poppins);
+  font-weight: 700; /* Esto asegura que el peso sea Bold */
+}
+
+/* Tema Claro (por defecto) */
+:root {
+  --color-dorado-1: #654922;
+  --color-dorado-2: #956e2f;
+  --color-dorado-3: #b68b4b;
+  --color-gris-1: #4d574e;
+  --color-gris-azulado: #2c4657;
+  --color-gris-2: #303531;
+  --color-negro: #202221;
+
+  /* Colores del TEMA CLARO */
+  --background: #ffffff;
+  --foreground: var(--color-gris-azulado);
+}
+
+/* Deteccion del esquema de color */
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--color-negro);
+    --foreground: var(--color-dorado-3);
+  }
+} */
+
+/* Estilos del Body */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-roboto);
+}
+
+/* Estilos para las flechas de navegación de Swiper */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 24px !important;
+  color: var(--color-gris-1);
+  font-weight: 700;
+  transition: color 0.2s;
+}
+
+.swiper-button-next:hover::after,
+.swiper-button-prev:hover::after {
+  color: white;
+}
