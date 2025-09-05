@@ -1,4 +1,5 @@
 # .github/workflows/deploy.yml
+
 name: Deploy Next.js to GitHub Pages
 
 on:
@@ -18,15 +19,28 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      # Añadimos la configuración para pnpm
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 10 # O la versión de pnpm que uses
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
-          cache: "npm"
+          node-version: "22"
+          #  Cambiamos la caché a pnpm
+          cache: "pnpm"
+
+      # Usamos pnpm para instalar
       - name: Install Dependencies
-        run: npm install
+        run: pnpm install
+
+      # Usamos pnpm para construir
       - name: Build
-        run: npm run build
+        run: pnpm run build
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
