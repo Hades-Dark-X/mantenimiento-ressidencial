@@ -26,12 +26,12 @@ h6 {
 }
 
 /* Deteccion del esquema de color */
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
     --background: var(--color-negro);
     --foreground: var(--color-dorado-3);
   }
-} */
+}
 
 /* Estilos del Body */
 body {

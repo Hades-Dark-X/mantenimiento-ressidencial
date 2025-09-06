@@ -74,7 +74,7 @@ export const sectionData = {
     // Usa una clave de cadena si contiene un guion
     title: "Sobre Nosotros",
     text: "Conoce a nuestro equipo y nuestra historia. Somos una empresa comprometida con la satisfacción del cliente, la calidad en el trabajo y la honestidad en cada interacción.",
-    image: "/images/mantenimiento-residencial-sobre-nosostros.web",
+    image: "/images/mantenimiento-residencial-sobre-nosotros.webp",
 
     specialists: [
       {
