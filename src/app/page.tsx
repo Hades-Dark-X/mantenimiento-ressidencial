@@ -25,8 +25,10 @@ const sectionComponents = {
   "sobre-nosotros": SobreNosotros,
 };
 
+type SectionId = keyof typeof sectionComponents;
+
 export default function Home() {
-  const [activeSection, setActiveSection] = useState("home");
+  const [activeSection, setActiveSection] = useState<SectionId>("home");
 
   const CurrentSectionComponent = sectionComponents[activeSection];
 
